@@ -6,7 +6,7 @@ import { log } from "node:console";
 
 export async function POST(request:Request){
     await dbConnect()
-
+    console.log("************")
     try {
         const {username,email,password} = await request.json()
         const existingUserVerifiedByUsername = await UserModel.findOne({
